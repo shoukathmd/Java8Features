@@ -1,0 +1,7 @@
+Java 8 provides some in-built functional interfaces in the java.util.function package.
+
+These interfaces are required so that, while writing lambda expressions, we don’t need to worry about creating a functional interface.
+
+There are 43 predefined interfaces in Java 8. Remembering all of them is a bit difficult, so we will divide them into categories and look at each category. The first category that we are looking at in this lesson is Predicate.
+
+Below are the interfaces in this category:
