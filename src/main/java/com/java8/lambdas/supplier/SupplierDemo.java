@@ -17,7 +17,11 @@ public class SupplierDemo {
     }
 
     public static void main(String[] args) {
-        Supplier<Person> supplier = () -> new Person("Alex", 45, "China");
+        int count;
+        Supplier<Person> supplier = () -> {
+            System.out.println("Supplying ");
+            return new Person("Alex", 45, "China");
+        };
         Predicate<Person> predicate = person -> person.getAge() > 60;
 
         boolean value = isPersonEligibel(supplier, predicate);
@@ -29,5 +33,9 @@ public class SupplierDemo {
         boolean value1 = isPersonEligibel(supplier, 30, biPredicate);
 
         System.out.println( "Eligibility using BiPredicate : " + value1);
+
+        System.out.println( "Supplied : " + supplier.get());
+        System.out.println( "Supplied : " + supplier.get());
+        System.out.println( "Supplied : " + supplier.get());
     }
 }
