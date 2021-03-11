@@ -23,14 +23,16 @@ public class PredicateDemo {
         System.out.println("Person's elgibility : " + value);
 
         //Predicate and then
-
         boolean value1 = isPersonEligibleForVote(p1, greaterThan.and(lessThan));
         System.out.println("Person's elgibility and  less than : " + value1);
 
+        //Predicate with or
         Predicate<Person> isFromUSA = person -> "USA".equals(person.getCountry());
-
         boolean value3 = isPersonEligibleForVote(p1, greaterThan.or(isFromUSA));
         System.out.println("Person's elgibility and  less than or from USA : " + value3);
+
+        //BiPredicate
+
 
     }
 
